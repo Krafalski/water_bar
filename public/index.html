@@ -4,9 +4,22 @@
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script src="./js/app.js" charset="utf-8"></script>
-    <title>My First App</title>
+    <title>Water Bar</title>
+    <link rel="stylesheet" href="../css/main.css">
   </head>
   <body ng-controller='MainController as ctrl'>
+    <nav ng-include="'partials/navigation.html'">
+
+    </nav>
     <h1>{{ ctrl.hello }}</h1>
+    <!-- <div ng-include="'partials/create_form.html'"> -->
+
+    </div>
+    <div class="container">
+      <div ng-include="ctrl.includePath">
+
+      </div>
+
+    </div>
   </body>
 </html>
