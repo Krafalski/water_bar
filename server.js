@@ -29,6 +29,10 @@ app.use( express.static( 'public' ));
 
 
 //Routes
+
+const seedController = require( './controllers/seed.js' );
+
+app.use( '/seed', seedController );
 const waterController = require( './controllers/waterController.js' );
 app.use ( '/waters' , waterController );
 

@@ -6,7 +6,7 @@ app.controller('MainController', ['$http', function($http) {
   this.waters = [];
 
   this.includePath = 'partials/menu.html';
-  this.changeInclude = function(path){
+  this.changeInclude = (path) => {
   this.includePath = 'partials/'+ path +'.html';
 }
 

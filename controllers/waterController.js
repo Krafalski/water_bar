@@ -7,12 +7,14 @@ const Water          = require ( '../models/waters.js' );
 // INDEX
 waters.get ( '/' , async ( req , res ) => {
   try {
-    const waters = await Water.find();
+    const waters = await Water.find({}, {_id: 0, __v:0});
     res.status( 200 ).json( waters );
   } catch ( error ) {
     res.status( 400 ).json({error : err.message});
   }
 });
+
+
 
 //CREATE
 waters.post ( '/' , async ( req , res ) => {
